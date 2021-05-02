@@ -1,0 +1,101 @@
+@media (min-width: 992px){
+.container{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+}
+
+.input-top{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-bot{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.email{
+	background-color: white;
+	opacity: 0.9;
+    min-height: 446px;
+}
+.input-mid{
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+.form-floating:focus-within {
+    z-index: 2;
+  }
+
+#get-email{
+    min-height: 571px;
+    opacity: 0.90;
+}
+.form-control, .form-select{
+    opacity: 0.90;
+}
+.poyo{
+    opacity: 0.10;
+}
+.logo{
+    padding-left: 25px;
+}
+
+.main-container{
+    background-color: #154360 ;
+    background-image: url(https://www.caleromarinas.com/wp-content/uploads/freshizer/416ca680923ad239be3fdfb5b91730e8_CALERO-MARINAS-MARINA-LANZAROTE-800-320-c.jpg);
+    background-size: cover;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	padding:25px 41px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+    opacity: 0.90;
+	width: 300px;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+body{ 
+  display:flex; 
+  flex-direction:column; 
+  height:100vh; 
+  margin:0;
+}
+
+footer{
+  margin-top:auto; 
+}
+
+.select, option{
+	background-color: transparent;
+}
+
+
+@media (max-width: 992px){
+.logo{
+    text-align: center;
+    padding: 0;
+}
+}
