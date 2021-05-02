@@ -258,13 +258,13 @@ function createEmailFormat() {
 //$(body.)
 $(".english-email").click(function(){ // si lo quiere ingles lo mando tal cual
     printMail();
-    //download("plantila.oft", emailTemplate);
+    download("plantila.msg", emailTemplate);
     //$(".english-email").attr("href", target); 
 });
 $(".spanish-email").click(function(){ // sil o quiere español al pulsar el botón traduzco y pa lante
     printMailEs();
     //$(".spanish-email").attr("href", target);
-    //download("plantila.oft", emailTemplate);
+    download("plantila.msg", emailTemplate);
 });
 
 $(".copy").click(function(){
