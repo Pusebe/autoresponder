@@ -7,6 +7,7 @@ const T5TRANSIT = 0.0186;
 const T5TRANSITBIGBOATS = 0.0484;
 const T5DISCOUNT = 0.25;
 const T0 = 0.025;
+const T0LESS9M = 0.0625;
 const T0DISCOUNT = 0.2;
 let plainText = "";
 let text = [];
@@ -198,7 +199,7 @@ function getTaxes() {
     else if ((sailingVessel && length < 12 || !sailingVessel && length < 9) && tariff === TRANSIT) {
         t5 = T5TRANSIT;
         if (!sailingVessel) { //ahor los motores de menos de 9m tmb pagan t0
-            t0 = T0;
+            t0 = T0LESS9M;
         } else {
             t0 = 0;
         }
