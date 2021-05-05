@@ -127,7 +127,7 @@ function printMailEs() {
 Muchas gracias por su interés Marina Lanzarote.
 %0D%0A
 %0D%0A
-Su reserva ha sido confirmada, su númer de reserva es: ${booking} Este número podría ser requerido a su llegada.
+Su reserva ha sido confirmada, su número de reserva es: ${booking} Este número podría ser requerido a su llegada.
 %0D%0A
 %0D%0A
 ETA: ${arrival} 
@@ -136,7 +136,7 @@ ETA: ${arrival}
 ETD: ${departure} 
 %0D%0A
 %0D%0A
-Sería de gran ayuda si pudiera enviar rellenos los formularios ajduntos, eso aceleraría el proceso de check-in a su llegada.
+Sería de gran ayuda si pudiera enviar rellenos los formularios adjuntos, eso aceleraría el proceso de check-in a su llegada.
 %0D%0A
 %0D%0A
 El precio para ${nights} noche/s para ${vessel} sería de: ${finalPrice}€ (si paga por adelantado).
@@ -238,9 +238,9 @@ $(".form-floating").change(function () {
     capitan = $("#name-input").val();
     vessel = $("#vessel-input").val();
     email = $("#email-input").val();
+    nights = parseInt($("#nights-input").val());
     arrival = $("#arrival-input").val();
     departure = $("#departure-input").val();
-    nights = parseInt($("#nights-input").val());
     length = $("#length-input").val();
     beam = $("#beam-input").val();
     if ($("#sailingVessel-input").val() === "false") {
@@ -251,6 +251,21 @@ $(".form-floating").change(function () {
         
     main();
 });
+
+//if manually change dates recalculate nights
+$("#arrival-input").change(function (){
+    arrival = $("#arrival-input").val();
+    calculateNights(arrival, departure);
+    $("#nights-input").val(nights);
+    main();
+})
+
+$("#departure-input").change(function (){
+    departure = $("#departure-input").val();
+    calculateNights(arrival, departure);
+    $("#nights-input").val(nights);
+    main();
+})
 
 function createEmailFormat() {
     //Construyo el mailto 
